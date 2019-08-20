@@ -38,7 +38,7 @@ metadata:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
 spec:
-  releaseName: wordpress2
+  releaseName: wordpress
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com
     name: wordpress
@@ -68,7 +68,7 @@ metadata:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
 spec:
-  releaseName: wordpress3
+  releaseName: wordpress
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com
     name: wordpress
@@ -98,7 +98,7 @@ metadata:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
 spec:
-  releaseName: wordpress4
+  releaseName: wordpress
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com
     name: wordpress
