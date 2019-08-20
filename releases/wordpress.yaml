@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: wordpress
   chart:
-    repository: https://kubernetes-charts.storage.googleapis.com/
+    #repository: https://kubernetes-charts.storage.googleapis.com/
     name: stable/wordpress
     version: 7.1.0
     #valueFileSecrets:
