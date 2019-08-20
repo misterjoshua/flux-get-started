@@ -15,8 +15,8 @@ spec:
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: stable/wordpress
-    #version: 5.1.3
-  valueFileSecrets:
+    version: 7.1.0
+    #valueFileSecrets:
     # the redis-auth secret contains the password value
     #- name: redis-auth
-  values:
+    #values:
