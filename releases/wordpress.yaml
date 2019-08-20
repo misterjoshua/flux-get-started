@@ -13,3 +13,6 @@ spec:
     repository: https://kubernetes-charts.storage.googleapis.com
     name: wordpress
     version: 7.1.0
+  values:
+    service:
+      type: NodePort
