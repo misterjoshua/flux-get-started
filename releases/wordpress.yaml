@@ -4,6 +4,8 @@ kind: HelmRelease
 metadata:
   name: wordpress
   namespace: demo
+  annotations:
+    flux.weave.works/automated: "true"
 spec:
   releaseName: redis
   chart:
