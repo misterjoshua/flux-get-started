@@ -21,3 +21,6 @@ spec:
         - path: /
     service:
       type: ClusterIP
+    resources:
+      requests:
+        cpu: 0.01
