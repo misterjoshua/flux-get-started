@@ -3,7 +3,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: wordpress
-  namespace: demo
+  namespace: flux
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
@@ -33,7 +33,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: wordpress2
-  namespace: demo
+  namespace: flux
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
@@ -63,7 +63,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: wordpress3
-  namespace: demo
+  namespace: flux
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
@@ -93,7 +93,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: wordpress4
-  namespace: demo
+  namespace: flux
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
@@ -123,7 +123,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: wordpress5
-  namespace: demo
+  namespace: flux
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
@@ -153,7 +153,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: wordpress6
-  namespace: demo
+  namespace: flux
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
@@ -183,7 +183,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: wordpress7
-  namespace: demo
+  namespace: flux
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
