@@ -41,7 +41,7 @@ spec:
   releaseName: wordpress2
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com
-    name: wordpress2
+    name: wordpress
     version: 7.1.0
   values:
     ingress:
@@ -71,7 +71,7 @@ spec:
   releaseName: wordpress3
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com
-    name: wordpress3
+    name: wordpress
     version: 7.1.0
   values:
     ingress:
@@ -101,7 +101,7 @@ spec:
   releaseName: wordpress4
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com
-    name: wordpress4
+    name: wordpress
     version: 7.1.0
   values:
     ingress:
