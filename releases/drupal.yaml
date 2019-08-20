@@ -2,22 +2,22 @@
 apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
-  name: wordpress
+  name: drupal
   namespace: demo
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~4.0
 spec:
-  releaseName: wordpress
+  releaseName: drupal
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com
-    name: wordpress
-    version: 7.1.0
+    name: drupal
+    version: 5.0.0
   values:
     ingress:
       enabled: true
       hosts:
-        - name: wp.fluxtest
+        - name: fluxtest
         - path: /
     service:
       type: ClusterIP
