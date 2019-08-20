@@ -2,7 +2,7 @@
 apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
-  name: redis
+  name: wordpress
   namespace: demo
   annotations:
     flux.weave.works/automated: "true"
@@ -14,25 +14,9 @@ spec:
   releaseName: redis
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
-    name: redis
-    version: 5.1.3
+    name: stable/wordpress
+    #version: 5.1.3
   valueFileSecrets:
     # the redis-auth secret contains the password value
-    - name: redis-auth
+    #- name: redis-auth
   values:
-    usePassword: true
-    image:
-      repository: bitnami/redis
-      tag: 4.0.12
-    service:
-      type: ClusterIP
-      port: 6379
-    cluster:
-      enabled: false
-    master:
-      securityContext:
-        enabled: false
-        fsGroup: 0
-        runAsUser: 0
-      persistence:
-        enabled: false
