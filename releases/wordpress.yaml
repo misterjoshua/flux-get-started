@@ -118,3 +118,93 @@ spec:
       resources:
         requests:
           cpu: 0.01
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: wordpress5
+  namespace: demo
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~4.0
+spec:
+  releaseName: wordpress
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: wordpress
+    version: 7.1.0
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - name: wp5.fluxtest
+        - path: /
+    service:
+      type: ClusterIP
+    resources:
+      requests:
+        cpu: 0.01
+    mariadb:
+      resources:
+        requests:
+          cpu: 0.01
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: wordpress6
+  namespace: demo
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~4.0
+spec:
+  releaseName: wordpress
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: wordpress
+    version: 7.1.0
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - name: wp6.fluxtest
+        - path: /
+    service:
+      type: ClusterIP
+    resources:
+      requests:
+        cpu: 0.01
+    mariadb:
+      resources:
+        requests:
+          cpu: 0.01
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: wordpress7
+  namespace: demo
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~4.0
+spec:
+  releaseName: wordpress
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: wordpress
+    version: 7.1.0
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - name: wp7.fluxtest
+        - path: /
+    service:
+      type: ClusterIP
+    resources:
+      requests:
+        cpu: 0.01
+    mariadb:
+      resources:
+        requests:
+          cpu: 0.01
