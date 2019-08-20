@@ -21,15 +21,100 @@ spec:
         - path: /
     service:
       type: ClusterIP
-    persistence:
-      storageClass: microk8s-hostpath
     resources:
       requests:
         cpu: 0.01
     mariadb:
-      persistence:
-        storageClass: microk8s-hostpath
       resources:
         requests:
           cpu: 0.01
-    
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: wordpress2
+  namespace: demo
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~4.0
+spec:
+  releaseName: wordpress2
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: wordpress2
+    version: 7.1.0
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - name: wp2.fluxtest
+        - path: /
+    service:
+      type: ClusterIP
+    resources:
+      requests:
+        cpu: 0.01
+    mariadb:
+      resources:
+        requests:
+          cpu: 0.01
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: wordpress3
+  namespace: demo
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~4.0
+spec:
+  releaseName: wordpress3
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: wordpress3
+    version: 7.1.0
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - name: wp3.fluxtest
+        - path: /
+    service:
+      type: ClusterIP
+    resources:
+      requests:
+        cpu: 0.01
+    mariadb:
+      resources:
+        requests:
+          cpu: 0.01
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: wordpress4
+  namespace: demo
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~4.0
+spec:
+  releaseName: wordpress4
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: wordpress4
+    version: 7.1.0
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - name: wp4.fluxtest
+        - path: /
+    service:
+      type: ClusterIP
+    resources:
+      requests:
+        cpu: 0.01
+    mariadb:
+      resources:
+        requests:
+          cpu: 0.01
